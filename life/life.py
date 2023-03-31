@@ -70,7 +70,7 @@ class Game:
         for i in range(self.board.shape[0]):
             for j in range(self.board.shape[1]):
                 if (neighbour_count[i, j] == 3
-                    or (self.board and neighbour_count[i, j] == 2)):
+                    or (self.board[i, j] and neighbour_count[i, j] == 2)):
                     self.board[i, j] = 1
                 else:
                     self.board[i, j] = 0
